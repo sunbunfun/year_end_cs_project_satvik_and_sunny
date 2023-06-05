@@ -30,13 +30,11 @@ class _LoginpageState extends State<Loginpage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 50, width: 300),
-            inputField("Username", usernameController),
+            inputField("Email", usernameController),
             const SizedBox(height: 20, width: 300),
             inputField("Password", passwordController, isPassword: true),
             const SizedBox(height: 50, width: 300),
             SignInButton(),
-            const SizedBox(height: 50, width: 300),
-            ExitButton(),
           ],
         ),
       ),
@@ -91,16 +89,6 @@ class _LoginpageState extends State<Loginpage> {
         padding: const EdgeInsets.symmetric(vertical: 10),
       ),
     );
-  }
-
-  Widget ExitButton() {
-    return ElevatedButton(
-        onPressed: () {
-          exit(0);
-        },
-        child: const SizedBox(
-            child: Text("Exit Application",
-                textAlign: TextAlign.center, style: TextStyle(fontSize: 20))));
   }
 
   Widget errorPopUpDialogue() {

@@ -43,19 +43,7 @@ class _MainPageState extends State<MainPage> {
             onDaySelected: _onDaySelected,
           ),
         ),
-        const SizedBox(height: 50, width: 300),
-        ExitButton(),
       ],
     );
-  }
-
-  Widget ExitButton() {
-    return ElevatedButton(
-        onPressed: () {
-          exit(0);
-        },
-        child: const SizedBox(
-            child: Text("Exit Application",
-                textAlign: TextAlign.center, style: TextStyle(fontSize: 20))));
   }
 }
