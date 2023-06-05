@@ -32,6 +32,8 @@ class _MainPageState extends State<MainPage> {
         Text("Selected Day: " + today.toString().split(" ")[0]),
         Container(
           child: TableCalendar(
+            headerStyle:
+                HeaderStyle(formatButtonVisible: false, titleCentered: true),
             selectedDayPredicate: (day) => isSameDay(day, today),
             focusedDay: today,
             firstDay: DateTime.utc(2008, 5, 28),
