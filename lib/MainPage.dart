@@ -11,6 +11,13 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  DateTime today = DateTime.now();
+  void _onDaySelected(DateTime day, DateTime focusedDay) {
+    setState(() {
+      today = day;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +31,11 @@ class _MainPageState extends State<MainPage> {
       children: [
         Container(
           child: TableCalendar(
-              focusedDay: DateTime.now(),
-              firstDay: DateTime.utc(2008, 5, 28),
-              lastDay: DateTime.utc(2040, 3, 16)),
+            focusedDay: today,
+            firstDay: DateTime.utc(2008, 5, 28),
+            lastDay: DateTime.utc(2040, 3, 16),
+            onDaySelected: _onDaySelected,
+          ),
         )
       ],
     );
