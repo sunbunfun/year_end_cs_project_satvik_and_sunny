@@ -22,7 +22,6 @@ class _MainPageState extends State<MainPage> {
   Widget content() {
     return Column(
       children: [
-        Text("123"),
         Container(
           child: TableCalendar(
               focusedDay: DateTime.now(),
