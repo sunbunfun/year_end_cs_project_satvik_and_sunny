@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:year_end_cs_project_satvik_and_sunny/MainPage.dart';
 
+import 'login.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,6 +18,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: MainPage());
+        home: Loginpage());
   }
 }
