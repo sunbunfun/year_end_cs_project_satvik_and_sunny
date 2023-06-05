@@ -29,6 +29,7 @@ class _MainPageState extends State<MainPage> {
   Widget content() {
     return Column(
       children: [
+        Text("selected Day = " + today.toString().split(" ")[0]),
         Container(
           child: TableCalendar(
             selectedDayPredicate: (day) => isSameDay(day, today),
