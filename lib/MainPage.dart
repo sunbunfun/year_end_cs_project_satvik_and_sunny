@@ -31,6 +31,7 @@ class _MainPageState extends State<MainPage> {
       children: [
         Container(
           child: TableCalendar(
+            selectedDayPredicate: (day) => isSameDay(day, today),
             focusedDay: today,
             firstDay: DateTime.utc(2008, 5, 28),
             lastDay: DateTime.utc(2040, 3, 16),
